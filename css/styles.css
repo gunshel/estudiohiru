@@ -1,0 +1,109 @@
+/* Fondo blanco continuo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255); /* Fondo blanco para toda la página */
+    color: #333;
+}
+
+.logo {
+    position: fixed;
+    width: 100px;
+    margin: 10px;
+}
+
+/* Proyectos en la página principal */
+.proyectos {
+    padding: 80px 20px;
+}
+
+.proyecto {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.proyecto img {
+    width: 30%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.proyecto p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.proyecto a {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del contenedor */
+}
+
+/* Sección para las imágenes del proyecto */
+.imagenes-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagenes-proyecto img {
+    width: 100%; /* Ajusta el tamaño de la imagen al 50% del contenedor */
+    max-width: 600px; /* Limita el ancho máximo */
+    height: auto; /* Mantiene la proporción original */
+    display: block;
+    margin: 20px 0; /* Espaciado entre las imágenes */
+}
+
+/* Enlace "Texto" para la descripción del proyecto */
+.texto-link {
+    text-align: left;
+    margin: 20px;
+}
+
+.texto-link a {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #666;
+}
+
+.texto-link a:hover {
+    color: #333;
+    border-bottom: 1px solid #333;
+}
+
+/* Página de descripción del proyecto */
+.descripcion {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+
+/* Footer fijo al fondo */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+    box-shadow: none; /* Sin sombras ni efectos */
+}
+
+.footer a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #666;
+}
