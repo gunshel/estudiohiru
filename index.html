@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRU STUDIO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Logo en la esquina superior izquierda -->
+    <header>
+        <img src="images/logo.png" alt="Logo Estudio" class="logo">
+    </header>
+
+  <!-- Contenedor de los proyectos -->
+<section class="proyectos" id="proyectos-container">
+    <!-- Los proyectos se insertarán aquí mediante JavaScript -->
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Datos de los proyectos
+        const proyectos = [
+            { href: 'proyecto1.html', imgSrc: 'images/home/1.jpg', alt: 'Proyecto 1', title: 'NAVE MARTINA' },
+            { href: 'proyecto2.html', imgSrc: 'images/home/2.jpg', alt: 'Proyecto 2', title: 'CHARO Y DANI' },
+            { href: 'proyecto3.html', imgSrc: 'images/home/3.jpg', alt: 'Proyecto 3', title: 'GUIONISTAS' },
+            { href: 'proyecto4.html', imgSrc: 'images/home/4.jpg', alt: 'Proyecto 4', title: 'ABTIN' },
+            { href: 'proyecto5.html', imgSrc: 'images/home/5.jpg', alt: 'Proyecto 5', title: 'FRANCISCO SUAREZ' },
+            { href: 'proyecto6.html', imgSrc: 'images/home/6.jpg', alt: 'Proyecto 6', title: 'CRUZ DEL SUR' },
+            { href: 'proyecto7.html', imgSrc: 'images/home/7.jpg', alt: 'Proyecto 7', title: 'GREENERY' },
+            { href: 'proyecto8.html', imgSrc: 'images/home/8.jpg', alt: 'Proyecto 8', title: 'INTZENEA' },
+            { href: 'proyecto9.html', imgSrc: 'images/home/9.jpg', alt: 'Proyecto 9', title: 'TINY SAINI' },
+            { href: 'proyecto10.html', imgSrc: 'images/home/10.jpg', alt: 'Proyecto 10', title: 'CAN TEMPS' },
+            { href: 'proyecto11.html', imgSrc: 'images/home/11.jpg', alt: 'Proyecto 11', title: 'FEDERAL CAFE' },
+            { href: 'proyecto12.html', imgSrc: 'images/home/12.jpg', alt: 'Proyecto 12', title: 'GARBO' },
+        ];
+
+        const container = document.getElementById('proyectos-container');
+
+        proyectos.forEach(proyecto => {
+            const div = document.createElement('div');
+            div.className = 'proyecto';
+
+            div.innerHTML = `
+                <a href="${proyecto.href}">
+                    <img src="${proyecto.imgSrc}" alt="${proyecto.alt}">
+                </a>
+                <p><a href="${proyecto.href}">${proyecto.title}</a></p>
+            `;
+
+            container.appendChild(div);
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Icono para abrir la página flotante -->
+ <div class="floating-icon" id="toggle-icon" onclick="toggleOverlay()">
+    <img src="images/symbols/rayas.png" alt="Info Icon" class="icon-closed">
+    <img src="images/symbols/x.png" alt="Close Icon" class="icon-open">
+</div>
+
+<!-- Página flotante -->
+<div class="overlay" id="overlay">
+    <div class="overlay-content">
+        <h2><a href="index.html">PROYECTOS</a></h2>
+        <h2><a href="estudio.html">ESTUDIO</a></h2>
+        <h2><a href="contacto.html">CONTACTO</a></h2>
+    </div>
+</div>
+ 
+ <script src="js/script_iconos X y rayas.js"></script>
+
+
+
+ <!-- Capa de transición -->
+ <div class="transition-overlay" id="transition-overlay"></div>
+ <script src="js/transition.js"></script>
+
+
+
+
+</body>
+</html>

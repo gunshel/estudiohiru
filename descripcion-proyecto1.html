@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripción del Proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS específico para la página de descripción */
+        .descripcion {
+            text-align: left;
+            padding: 40px;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.6;
+            
+        }
+
+        /* Footer */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            text-align: left;
+            box-shadow: none; /* Sin sombras ni efectos */
+        }
+
+        .footer a {
+            font-family: 'Roboto';
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="descripcion">
+        <h1></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit parturient nam arcu posuere, dictumst aliquam et himenaeos nibh augue suspendisse luctus ligula. Pharetra ullamcorper litora penatibus sodales ut blandit, magnis accumsan porta mollis torquent urna, quam gravida auctor curae nullam. Id primis a dapibus sociosqu volutpat ultrices nulla mi, dictumst morbi auctor metus pulvinar condimentum posuere, quisque ut potenti penatibus sed eros dis.
+
+            Eu maecenas penatibus accumsan mi mollis platea scelerisque mattis, risus sapien in cubilia eget vehicula ante fringilla, at commodo netus fusce iaculis facilisis tempor. Sodales potenti placerat vivamus hendrerit habitant dis congue est nisi felis vehicula, metus fringilla proin habitasse montes rutrum sollicitudin quam non rhoncus egestas conubia, fermentum curabitur primis arcu interdum ligula dictum integer senectus himenaeos. Curae eros erat malesuada venenatis conubia dictumst rhoncus luctus pretium, potenti nulla volutpat sagittis dui mauris laoreet ultrices in, commodo litora tristique sociosqu per class pulvinar vivamus.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="proyecto1.html">Imágenes</a>
+    </footer>
+
+    <script>
+        // Cerrar la página de descripción al hacer clic en cualquier parte de la pantalla
+        document.addEventListener('click', function(event) {
+            // Verificar que el clic no sea en el contenido del footer
+            if (!event.target.closest('.footer')) {
+                window.location.href = 'proyecto1.html';
+            }
+        });
+    </script>
+</body>
+</html>

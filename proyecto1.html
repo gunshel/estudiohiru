@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTUDIO HIRU</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo Estudio" class="logo">
+        </a>
+    </header>
+    
+    <section class="imagenes-proyecto">
+        <img src="images/proyecto1/1.jpg" alt="Imagen 1 del Proyecto">
+        <img src="images/proyecto1/2.jpg" alt="Imagen 2 del Proyecto">
+        <img src="images/proyecto1/3.jpg" alt="Imagen 3 del Proyecto">
+        <img src="images/proyecto1/4.jpg" alt="Imagen 4 del Proyecto">
+        <img src="images/proyecto1/5.jpg" alt="Imagen 5 del Proyecto">
+        <img src="images/proyecto1/6.jpg" alt="Imagen 6 del Proyecto">
+        <img src="images/proyecto1/7.jpg" alt="Imagen 7 del Proyecto">
+        <img src="images/proyecto1/8.jpg" alt="Imagen 8 del Proyecto">
+        <img src="images/proyecto1/9.jpg" alt="Imagen 9 del Proyecto">
+        <img src="images/proyecto1/10.jpg" alt="Imagen 10 del Proyecto">
+        <img src="images/proyecto1/11.jpg" alt="Imagen 11 del Proyecto">
+        <img src="images/proyecto1/12.jpg" alt="Imagen 12 del Proyecto">
+        <img src="images/proyecto1/13.jpg" alt="Imagen 13 del Proyecto">
+        <img src="images/proyecto1/14.jpg" alt="Imagen 14 del Proyecto">
+        <img src="images/proyecto1/15.jpg" alt="Imagen 15 del Proyecto">
+        <img src="images/proyecto1/16.jpg" alt="Imagen 16 del Proyecto">
+        <img src="images/proyecto1/17.jpg" alt="Imagen 17 del Proyecto">
+        <img src="images/proyecto1/18.jpg" alt="Imagen 18 del Proyecto">
+        <img src="images/proyecto1/19.jpg" alt="Imagen 19 del Proyecto">
+        <img src="images/proyecto1/20.jpg" alt="Imagen 20 del Proyecto">
+
+    </section>
+   
+   <!-- rellenar esto en cada proyecto!!! -->
+   <script>
+    const T1 = "NAVE MARTINA";
+    const NumProy = 1;
+    const NumMax = 12;
+    </script>
+
+<!-- Este script hace que solo se utilicen las imagenes que haya en la carpeta, en vez de cargar las 30 totales por si acaso hay menos -->
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.imagenes-proyecto img');
+
+        images.forEach((img) => {
+            // Intentar cargar la imagen y manejar errores
+            img.addEventListener('load', () => {
+                // Imagen cargada correctamente, hacer nada
+            });
+
+            img.addEventListener('error', () => {
+                // Si hay un error al cargar la imagen, ocultarla
+                img.style.display = 'none'; // Ocultar la imagen
+            });
+
+            // Forzar un reintento si la imagen no se carga
+            img.src = img.src; 
+        });
+    });
+</script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="descripcion-proyecto1.html"class="footer-text">Texto</a>
+        <a href="descripcion-proyecto1.html" class="footer-center">
+            <div class="footer-center" id="footer-project-name">Nombre del Proyecto</div>
+        </a>
+        <div class="footer-arrows">
+        <a href="#" id="prev-project" class="arrow-link">
+            <img src="images/symbols/Flechai.png" alt="Proyecto Anterior" class="arrow">
+        </a>
+        <a href="#" id="next-project" class="arrow-link">
+            <img src="images/symbols/Flecha.png" alt="Proyecto Siguiente" class="arrow">
+        </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para actualizar el nombre del proyecto en el footer
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectName = T1; // Usa la variable definida arriba
+            document.getElementById('footer-project-name').textContent = projectName;
+        });
+    </script>
+
+<script>
+   
+    // Variables para el nombre del proyecto y enlaces
+    const tituloProyecto = T1;
+    const projectNumber = NumProy; // Ajusta este número según el proyecto actual
+    const totalProjects = NumMax; // El número total de proyectos que tienes
+
+    // JavaScript para actualizar el nombre del proyecto en el footer
+    document.addEventListener('DOMContentLoaded', () => {
+        // Actualiza el nombre del proyecto en el footer
+        document.getElementById('footer-project-name').textContent = tituloProyecto;
+        
+        // Determina el enlace para el proyecto anterior
+        const prevProject = projectNumber > 1 ? `proyecto${projectNumber - 1}.html` : `proyecto${totalProjects}.html`; // Si es el primer proyecto, va al último
+        
+        // Determina el enlace para el próximo proyecto
+        const nextProject = projectNumber < totalProjects ? `proyecto${projectNumber + 1}.html` : `proyecto1.html`; // Si es el último proyecto, va al primero
+
+        // Establece los enlaces en los iconos de navegación
+        document.getElementById('prev-project').href = prevProject;
+        document.getElementById('next-project').href = nextProject;
+    });
+</script>
+
+
+
+<!-- Icono para abrir la página flotante -->
+<div class="floating-icon" id="toggle-icon" onclick="toggleOverlay()">
+    <img src="images/symbols/rayas.png" alt="Info Icon" class="icon-closed">
+    <img src="images/symbols/x.png" alt="Close Icon" class="icon-open">
+</div>
+
+<!-- Página flotante -->
+<div class="overlay" id="overlay">
+    <div class="overlay-content">
+        <h2><a href="index.html">PROYECTOS</a></h2>
+        <h2><a href="estudio.html">ESTUDIO</a></h2>
+        <h2><a href="contacto.html">CONTACTO</a></h2>
+    </div>
+</div>
+ <!-- Incluye el archivo JavaScript -->
+ <script src="js/script_iconos X y rayas.js"></script>
+
+
+</body>
+</html>
